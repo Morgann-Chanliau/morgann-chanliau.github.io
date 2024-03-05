@@ -1,0 +1,509 @@
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  .title {
+    font-weight: 550 !important;
+  }
+  .titledips {
+    font-weight: 450 !important;
+  }
+  .heading {
+    font-weight: 650 !important;
+  }
+  .subtitle {
+    font-weight: 250 !important;
+  }
+  .important {
+    font-weight: 450 !important;
+  }
+  .bold {
+    font-weight: 450 !important;
+  }
+  .text {
+    font-weight: 250 !important;
+  }
+  .line1 {
+    background-color: black;
+    width: 2px;
+    position: absolute;
+    height: 98%;
+    left: -21px;
+  }
+  @media screen and (min-width: 700px) {
+    .line1 {
+      width: 3px;
+      left: -28.75px !important;
+    }
+  }
+}
+body {
+  max-width: 100vw;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+}
+body ::-webkit-scrollbar {
+  scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+  -ms-overflow-style: none; /* Disable scrollbar IE 10+ */
+  overflow-y: scroll;
+}
+body p {
+  margin: 0;
+}
+body .title {
+  font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.4375rem);
+  padding-top: 25px;
+  font-weight: 600;
+  padding-bottom: 7px;
+}
+body .titledips {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.4375rem);
+  font-weight: 500;
+}
+body .heading {
+  font-size: clamp(1.375rem, 1.325rem + 0.25vw, 1.625rem);
+  color: rgb(0, 87, 121);
+  font-weight: bold;
+}
+body .subtitle {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+body .important {
+  color: rgb(0, 87, 121);
+  font-weight: 500;
+}
+body .bold {
+  font-weight: 500;
+}
+body .text {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+}
+body ul {
+  margin: 0;
+  padding-bottom: 0;
+  padding-left: 17px;
+}
+body li {
+  padding-bottom: 0;
+}
+body .main {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  body .main {
+    flex-direction: row;
+  }
+}
+body .sides {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+@media screen and (min-width: 700px) {
+  body .sides {
+    flex-direction: row;
+  }
+}
+
+.header {
+  background-image: url(".././assets/banniere5.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: clamp(9.375rem, 6.875rem + 12.5vw, 21.875rem);
+  filter: brightness(110%);
+}
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  filter: brightness(90%);
+}
+.header__wrapper .photo {
+  width: clamp(3.75rem, 2.3125rem + 7.1875vw, 10.9375rem);
+  height: clamp(4.6875rem, 2.8125rem + 9.375vw, 14.0625rem);
+  position: absolute;
+  left: clamp(0.9375rem, -5.1311rem + 30.343vw, 8.125rem);
+  filter: saturate(130%);
+  filter: contrast(140%);
+}
+@media screen and (min-width: 700px) {
+  .header__wrapper .photo {
+    left: 0;
+    left: clamp(3.125rem, -10.3227rem + 30.7377vw, 26.5625rem);
+  }
+}
+.header__wrapper .presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
+  left: clamp(5.3125rem, -2.3392rem + 38.2586vw, 14.375rem);
+}
+.header__wrapper .presentation .name {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.25rem, 0.925rem + 1.625vw, 2.875rem);
+  font-weight: bold;
+}
+.header__wrapper .presentation .projet_pro {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: clamp(1.125rem, 0.9rem + 1.125vw, 2.25rem);
+  font-weight: 500;
+}
+.header__wrapper .presentation .projet_pro div {
+  width: fit-content;
+}
+@media screen and (min-width: 700px) {
+  .header__wrapper .presentation .projet_pro div {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 700px) {
+  .header__wrapper .presentation .projet_pro {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 700px) {
+  .header__wrapper .presentation {
+    left: clamp(9.375rem, -8.5553rem + 40.9836vw, 40.625rem);
+  }
+}
+@media screen and (min-width: 700px) {
+  .header__wrapper .presentation {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.contact {
+  padding-top: clamp(1.25rem, 0.6875rem + 2.8125vw, 4.0625rem);
+  padding-bottom: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+  display: flex;
+  justify-content: center;
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+}
+@media (min-width: 700px) {
+  .contact {
+    width: 30%;
+  }
+}
+.contact .contactcontainer {
+  width: 75%;
+}
+.contact .contactcontainer .contactitem {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: clamp(0.3125rem, 0.1875rem + 0.625vw, 0.9375rem);
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+.contact .contactcontainer .contactitem .contactitemlogo img {
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
+}
+.contact .contactcontainer .contactitem a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (min-width: 700px) {
+  .contact .contactcontainer .contactitem a {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact .contactcontainer .contactitem a {
+    flex-direction: row;
+  }
+}
+.contact .contactcontainer .contactitem .contactitemtext {
+  align-self: center;
+  font-weight: 400;
+}
+@media screen and (min-width: 475px) {
+  .contact .contactcontainer {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .contact .contactcontainer {
+    width: 37%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .contact .contactcontainer {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .contact {
+    justify-content: end;
+  }
+}
+
+.projet {
+  padding-top: clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem);
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.projet .container {
+  width: 85%;
+  margin-top: 20px;
+}
+.projet .container p {
+  padding-top: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+  padding-bottom: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+}
+@media (min-width: 700px) {
+  .projet {
+    width: 70%;
+    padding-bottom: 0;
+  }
+}
+
+.rightside {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rightside .title {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+}
+.rightside .text {
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+.rightside .textbottom {
+  padding-bottom: 3px;
+  padding-left: 20px;
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+}
+.rightside .subtitle {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.rightside .heading {
+  margin-bottom: 35px;
+}
+.rightside .container {
+  width: 85%;
+  margin-bottom: 50px;
+}
+.rightside .container .dipscontainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.rightside .container .dipscontainer .line {
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  align-self: last baseline;
+  position: absolute;
+  left: 4px;
+}
+.rightside .container .dips .titlepoint {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.rightside .container .dips .titlepoint .pointzone {
+  display: flex;
+}
+.rightside .container .dips .titlepoint .pointzone .point {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  align-self: center;
+}
+@media (min-width: 700px) {
+  .rightside {
+    width: 70%;
+  }
+}
+.rightside .container2 {
+  width: 85%;
+  margin-bottom: 50px;
+}
+.rightside .container2 .titlenormal {
+  font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.4375rem);
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.rightside .container2 .comps {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+  padding-left: 15px;
+}
+.rightside .container2 .titlepoint {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-bottom: 10px;
+}
+.rightside .container2 .titlepoint .pointzone {
+  display: flex;
+}
+.rightside .container2 .titlepoint .pointzone .point2 {
+  width: 7px;
+  height: 7px;
+  background-color: black;
+  border-radius: 50%;
+  align-self: center;
+}
+.rightside .container3 {
+  width: 85%;
+  padding-bottom: 30px;
+}
+.rightside .container3 .comps {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+  padding-left: 15px;
+}
+.rightside .container3 .compsbottom {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+  padding-left: 15px;
+}
+.rightside .container3 .titlepoint2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+.rightside .container3 .titlepoint2 .pointzone {
+  display: flex;
+}
+.rightside .container3 .titlepoint2 .pointzone .point3 {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+  align-self: center;
+}
+.rightside .container3 .titlepoint2bottom {
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.rightside .container3 .titlepoint2bottom .pointzone {
+  display: flex;
+}
+.rightside .container3 .titlepoint2bottom .pointzone .point3 {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+  align-self: center;
+}
+.rightside .container3 .titlepoint2bottom .compsbottom {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+  padding-left: 15px;
+}
+
+.leftside {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.leftside .titleleft {
+  padding-top: 10px;
+  font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.4375rem);
+  font-weight: 600;
+  padding-bottom: 7px;
+}
+.leftside .textbottom {
+  padding-bottom: 3px;
+  padding-left: 20px;
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+}
+.leftside .heading {
+  margin-bottom: 35px;
+  margin-top: 50px;
+}
+.leftside .headingfirst {
+  margin-bottom: 35px;
+  font-size: clamp(1.375rem, 1.325rem + 0.25vw, 1.625rem);
+  color: rgb(0, 87, 121);
+  font-weight: bold;
+}
+.leftside .comps {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 300;
+  padding-left: 15px;
+  width: 120%;
+}
+.leftside .container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.leftside .container .titlepoint {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-bottom: 10px;
+  width: 80%;
+}
+.leftside .container .titlepoint .pointzone {
+  display: flex;
+}
+.leftside .container .titlepoint .pointzone .point3 {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+  align-self: center;
+}
+@media screen and (min-width: 700px) {
+  .leftside {
+    width: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
