@@ -43,10 +43,6 @@ body {
   padding: 0%;
   margin: 0%;
   font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-rendering: optimizeLegibility;
 }
 body ::-webkit-scrollbar {
   scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
@@ -124,7 +120,7 @@ body .sides {
   justify-content: center;
   width: 100%;
   height: clamp(9.375rem, 6.875rem + 12.5vw, 21.875rem);
-  filter: brightness(110%);
+  filter: saturate(150%);
 }
 .header__wrapper {
   display: flex;
@@ -133,7 +129,6 @@ body .sides {
   align-items: center;
   width: 100%;
   position: relative;
-  filter: brightness(90%);
 }
 .header__wrapper .presentation {
   display: flex;
@@ -199,6 +194,7 @@ body .sides {
 .contact .contactcontainer .contactitem {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-bottom: clamp(0.3125rem, 0.1875rem + 0.625vw, 0.9375rem);
   text-decoration: none;
   color: black;
