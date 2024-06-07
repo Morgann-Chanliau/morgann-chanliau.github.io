@@ -135,20 +135,6 @@ body .sides {
   position: relative;
   filter: brightness(90%);
 }
-.header__wrapper .photo {
-  width: clamp(3.75rem, 2.3125rem + 7.1875vw, 10.9375rem);
-  height: clamp(4.6875rem, 2.8125rem + 9.375vw, 14.0625rem);
-  position: absolute;
-  left: clamp(0.9375rem, -5.1311rem + 30.343vw, 8.125rem);
-  filter: saturate(130%);
-  filter: contrast(140%);
-}
-@media screen and (min-width: 700px) {
-  .header__wrapper .photo {
-    left: 0;
-    left: clamp(3.125rem, -10.3227rem + 30.7377vw, 26.5625rem);
-  }
-}
 .header__wrapper .presentation {
   display: flex;
   flex-direction: column;
@@ -445,8 +431,9 @@ body .sides {
 .leftside {
   font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 75px;
   padding-bottom: 75px;
 }
@@ -503,6 +490,7 @@ body .sides {
 @media screen and (min-width: 700px) {
   .leftside {
     width: 30%;
+    height:80%;
     padding-top: 0;
     padding-bottom: 0;
   }
